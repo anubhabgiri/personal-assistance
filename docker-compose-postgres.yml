@@ -1,0 +1,13 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: postgres-local
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+
+volumes:
+  pgdata:
