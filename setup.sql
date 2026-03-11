@@ -16,7 +16,7 @@ CREATE TABLE if NOT EXISTS notes (
     mood TEXT,
     tags TEXT[], 
     topic TEXT NOT NULL, 
-    embeddings VECTOR(3072) NOT NULL
+    embedding VECTOR(3072) NOT NULL
 );
 
 CREATE INDEX idx_created_at ON notes(created_at);
